@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+  xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+  xmlns:discardedTask="clr-namespace:AsyncAwaitConstructors.Examples.DiscardedTask"
+  x:Class="AsyncAwaitConstructors.Examples.DiscardedTask.DiscardedTaskPage"
+  x:DataType="discardedTask:DiscardedTaskViewModel"
+  Title="DiscardedTaskPage">
+
+  <VerticalStackLayout
+    BindableLayout.ItemsSource="{Binding ProductList}"
+    Spacing="10">
+    <BindableLayout.ItemTemplate>
+      <DataTemplate x:DataType="x:String">
+        <Label
+          Text="{Binding .}"
+          VerticalTextAlignment="Center"
+          VerticalOptions="Center" />
+      </DataTemplate>
+    </BindableLayout.ItemTemplate>
+  </VerticalStackLayout>
+
+</ContentPage>

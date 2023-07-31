@@ -1,12 +1,11 @@
-﻿namespace AsyncAwaitConstructors
-{
-    public partial class App : Application
-    {
-        public App()
-        {
-            InitializeComponent();
+﻿namespace AsyncAwaitConstructors;
 
-            MainPage = new AppShell();
-        }
+public partial class App : Application
+{
+    public App()
+    {
+        InitializeComponent();
+
+        MainPage = new AppShell();
     }
 }

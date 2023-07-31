@@ -1,10 +1,15 @@
-﻿namespace AsyncAwaitConstructors
+﻿using AsyncAwaitConstructors.Examples.AsyncVoid;
+using AsyncAwaitConstructors.Examples.DiscardedTask;
+
+namespace AsyncAwaitConstructors;
+
+public partial class AppShell : Shell
 {
-    public partial class AppShell : Shell
+    public AppShell()
     {
-        public AppShell()
-        {
-            InitializeComponent();
-        }
+        InitializeComponent();
+
+        Routing.RegisterRoute(nameof(AsyncVoidPage), typeof(AsyncVoidPage));
+        Routing.RegisterRoute(nameof(DiscardedTaskPage), typeof(DiscardedTaskPage));
     }
 }
