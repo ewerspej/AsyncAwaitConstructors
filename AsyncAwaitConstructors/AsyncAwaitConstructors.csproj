@@ -54,12 +54,14 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Folder Include="Examples\AsyncInitializer\" />
 	  <Folder Include="Examples\AsyncFactory\" />
 	  <Folder Include="Examples\DependencyInjection\" />
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiXaml Update="Examples\AsyncInitializer\AsyncInitializerPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Examples\AsyncVoid\AsyncVoidPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

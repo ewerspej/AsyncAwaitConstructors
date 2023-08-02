@@ -1,15 +1,17 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
+using System.Collections.ObjectModel;
 
 namespace AsyncAwaitConstructors.Examples.DiscardedTask;
 
 public partial class DiscardedTaskViewModel : ObservableObject
 {
     [ObservableProperty]
-    private List<string> _productList;
+    private ObservableCollection<string> _productList;
 
     public DiscardedTaskViewModel()
     {
+        // The constructor will finish before LoadDataAsync() has finished, ProductList will not be initialized right after construction
         _ = LoadDataAsync();
     }
 
@@ -17,7 +19,7 @@ public partial class DiscardedTaskViewModel : ObservableObject
     {
         await Task.Delay(TimeSpan.FromSeconds(2));
 
-        ProductList = new List<string>
+        ProductList = new ObservableCollection<string>
         {
             "Sugar", "Milk", "Honey"
         };
