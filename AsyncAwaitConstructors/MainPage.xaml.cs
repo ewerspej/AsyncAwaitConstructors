@@ -27,6 +27,24 @@ public partial class MainPage : ContentPage
         await Shell.Current.GoToAsync(nameof(AsyncInitializerPage));
     }
 
+    private async void OnAsyncInitializer2ButtonClicked(object sender, EventArgs e)
+    {
+        var vm = new AsyncInitializerViewModel();
+        await vm.LoadAsync();
+        var page = new AsyncInitializerPage2(vm);
+        await Shell.Current.Navigation.PushAsync(page);
+    }
+
+    private async void OnAsyncInitializer3ButtonClicked(object sender, EventArgs e)
+    {
+        var vm = new AsyncInitializerViewModel();
+        var page = new AsyncInitializerPage2(vm);
+        await Shell.Current.Navigation.PushAsync(page);
+
+        // loading the ViewModel data after showing the page is useful to provide a smoother user experience
+        await vm.LoadAsync();
+    }
+
     private async void OnAsyncFactoryButtonClicked(object sender, EventArgs e)
     {
         var vm = await AsyncFactoryViewModel.CreateNewAsync();

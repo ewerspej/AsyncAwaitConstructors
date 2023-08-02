@@ -60,6 +60,9 @@
 	  <MauiXaml Update="Examples\AsyncInitializer\AsyncInitializerPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Examples\AsyncInitializer\AsyncInitializerPage2.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Examples\AsyncVoid\AsyncVoidPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

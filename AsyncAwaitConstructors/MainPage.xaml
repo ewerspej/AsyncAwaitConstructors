@@ -20,6 +20,14 @@
         Clicked="OnAsyncInitializerButtonClicked" />
 
       <Button
+        Text="async initializer v2"
+        Clicked="OnAsyncInitializer2ButtonClicked" />
+
+      <Button
+        Text="async initializer v3"
+        Clicked="OnAsyncInitializer3ButtonClicked" />
+
+      <Button
         Text="async factory"
         Clicked="OnAsyncFactoryButtonClicked" />
 
