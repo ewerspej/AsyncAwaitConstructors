@@ -2,18 +2,14 @@
 using CommunityToolkit.Mvvm.Input;
 using System.Collections.ObjectModel;
 
-namespace AsyncAwaitConstructors.Examples.DiscardedTask;
+namespace AsyncAwaitConstructors.Examples.AsyncFactory;
 
-public partial class DiscardedTaskViewModel : ObservableObject
+public partial class AsyncFactoryViewModel : ObservableObject
 {
     [ObservableProperty]
-    private ObservableCollection<string> _productList;
+    private ObservableCollection<string> _productList = new();
 
-    public DiscardedTaskViewModel()
-    {
-        // The constructor will finish before LoadAsync() has finished, ProductList will not be initialized right after construction
-        _ = LoadAsync();
-    }
+    private AsyncFactoryViewModel() {}
 
     private async Task LoadAsync()
     {
@@ -23,6 +19,13 @@ public partial class DiscardedTaskViewModel : ObservableObject
         {
             "Sugar", "Milk", "Honey"
         };
+    }
+
+    public static async Task<AsyncFactoryViewModel> CreateNewAsync()
+    {
+        var instance = new AsyncFactoryViewModel();
+        await instance.LoadAsync();
+        return instance;
     }
 
     [RelayCommand]

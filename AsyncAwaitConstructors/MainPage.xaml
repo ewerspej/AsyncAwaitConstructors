@@ -19,6 +19,10 @@
         Text="async initializer"
         Clicked="OnAsyncInitializerButtonClicked" />
 
+      <Button
+        Text="async factory"
+        Clicked="OnAsyncFactoryButtonClicked" />
+
     </VerticalStackLayout>
   </Grid>
 

@@ -1,4 +1,5 @@
-﻿using AsyncAwaitConstructors.Examples.AsyncInitializer;
+﻿using AsyncAwaitConstructors.Examples.AsyncFactory;
+using AsyncAwaitConstructors.Examples.AsyncInitializer;
 using AsyncAwaitConstructors.Examples.AsyncVoid;
 using AsyncAwaitConstructors.Examples.DiscardedTask;
 
@@ -24,5 +25,12 @@ public partial class MainPage : ContentPage
     private async void OnAsyncInitializerButtonClicked(object sender, EventArgs e)
     {
         await Shell.Current.GoToAsync(nameof(AsyncInitializerPage));
+    }
+
+    private async void OnAsyncFactoryButtonClicked(object sender, EventArgs e)
+    {
+        var vm = await AsyncFactoryViewModel.CreateNewAsync();
+        var page = new AsyncFactoryPage(vm);
+        await Shell.Current.Navigation.PushAsync(page);
     }
 }

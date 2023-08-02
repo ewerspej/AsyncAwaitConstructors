@@ -11,11 +11,11 @@ public partial class AsyncVoidViewModel : ObservableObject
 
     public AsyncVoidViewModel()
     {
-        // The constructor will finish before LoadData() has finished, ProductList will not be initialized right after construction
-        LoadData();
+        // The constructor will finish before Load() has finished, ProductList will not be initialized right after construction
+        Load();
     }
 
-    private async void LoadData()
+    private async void Load()
     {
         await Task.Delay(TimeSpan.FromSeconds(2));
 

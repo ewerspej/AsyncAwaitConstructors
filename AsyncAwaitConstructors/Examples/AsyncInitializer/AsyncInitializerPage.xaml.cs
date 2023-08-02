@@ -18,6 +18,7 @@ public partial class AsyncInitializerPage : ContentPage
     {
         base.OnAppearing();
 
+        // problem: we load the data every time the page appears on screen, which is not ideal and often not wanted
         await _viewModel.LoadAsync();
 
         // will work, because it's called after the ViewModel has been initialized
