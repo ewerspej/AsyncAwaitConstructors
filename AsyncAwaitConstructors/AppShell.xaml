@@ -3,16 +3,19 @@
     x:Class="AsyncAwaitConstructors.AppShell"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:AsyncAwaitConstructors"
+    xmlns:examples1="clr-namespace:AsyncAwaitConstructors.Examples1"
+    xmlns:examples2="clr-namespace:AsyncAwaitConstructors.Examples2"
     Shell.FlyoutBehavior="Disabled">
 
   <TabBar>
     <ShellContent
       Title="Pages"
-      ContentTemplate="{DataTemplate local:PagesPage}"
-      Route="PagesPage" />
-    <!--<ShellContent
-        Title="Data" />-->
+      ContentTemplate="{DataTemplate examples1:Examples1Page}"
+      Route="Examples1Page" />
+    <ShellContent
+      Title="Data"
+      ContentTemplate="{DataTemplate examples2:Examples2Page}"
+      Route="Examples2Page" />
   </TabBar>
 
 </Shell>

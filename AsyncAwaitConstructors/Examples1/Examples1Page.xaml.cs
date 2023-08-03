@@ -3,11 +3,11 @@ using AsyncAwaitConstructors.Examples1.AsyncInitializer;
 using AsyncAwaitConstructors.Examples1.AsyncVoid;
 using AsyncAwaitConstructors.Examples1.DiscardedTask;
 
-namespace AsyncAwaitConstructors;
+namespace AsyncAwaitConstructors.Examples1;
 
-public partial class PagesPage : ContentPage
+public partial class Examples1Page : ContentPage
 {
-    public PagesPage()
+    public Examples1Page()
     {
         InitializeComponent();
     }

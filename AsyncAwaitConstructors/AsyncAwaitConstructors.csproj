@@ -53,4 +53,22 @@
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="7.0.0" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <Folder Include="Examples2\AsyncVoid\" />
+	  <Folder Include="Examples2\AsyncInitializer\" />
+	  <Folder Include="Examples2\AsyncFactory\" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Compile Update="Examples1\Examples1Page.xaml.cs">
+	    <DependentUpon>Examples1Page.xaml</DependentUpon>
+	  </Compile>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiXaml Update="Examples2\Examples2Page.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	</ItemGroup>
+
 </Project>
