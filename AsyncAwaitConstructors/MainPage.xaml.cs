@@ -45,6 +45,11 @@ public partial class MainPage : ContentPage
         await vm.LoadAsync();
     }
 
+    private async void OnAsyncInitializer4ButtonClicked(object sender, EventArgs e)
+    {
+        await Shell.Current.GoToAsync(nameof(AsyncInitializerPage2));
+    }
+
     private async void OnAsyncFactoryButtonClicked(object sender, EventArgs e)
     {
         var vm = await AsyncFactoryViewModel.CreateNewAsync();

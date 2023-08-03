@@ -24,7 +24,8 @@ public partial class AsyncFactoryViewModel : ObservableObject
     }
 
     // This pattern is very useful in order to avoid async void methods or calling asynchronous methods in constructors.
-    // One downside of this approach is that the created object is only available after loading finished.
+    // One downside of this approach is that the created object is only available after loading finished,
+    // which also means that it won't work with Shell's dependency injection, because only synchronous factory methods are possible.
     public static async Task<AsyncFactoryViewModel> CreateNewAsync()
     {
         var instance = new AsyncFactoryViewModel();

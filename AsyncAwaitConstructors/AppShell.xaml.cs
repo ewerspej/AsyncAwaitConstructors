@@ -13,5 +13,6 @@ public partial class AppShell : Shell
         Routing.RegisterRoute(nameof(AsyncVoidPage), typeof(AsyncVoidPage));
         Routing.RegisterRoute(nameof(DiscardedTaskPage), typeof(DiscardedTaskPage));
         Routing.RegisterRoute(nameof(AsyncInitializerPage), typeof(AsyncInitializerPage));
+        Routing.RegisterRoute(nameof(AsyncInitializerPage2), typeof(AsyncInitializerPage2));
     }
 }

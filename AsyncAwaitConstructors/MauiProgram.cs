@@ -1,4 +1,7 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using AsyncAwaitConstructors.Examples.AsyncInitializer;
+using AsyncAwaitConstructors.Examples.AsyncVoid;
+using AsyncAwaitConstructors.Examples.DiscardedTask;
+using Microsoft.Extensions.Logging;
 
 namespace AsyncAwaitConstructors;
 
@@ -18,6 +21,23 @@ public static class MauiProgram
 #if DEBUG
         builder.Logging.AddDebug();
 #endif
+
+        // strictly not necessary
+        builder.Services.AddTransient<AsyncVoidPage>();
+        builder.Services.AddTransient<DiscardedTaskPage>();
+
+        // required for Shell's automatic dependency injection
+        builder.Services.AddTransient(x =>
+        {
+            var vm = new AsyncInitializerViewModel();
+
+            // here, factory methods cannot be asynchronous, so we cannot await the loading task
+            // this is not ideal, because it hides the fact that some data is being loaded asynchronously
+            _ = vm.LoadAsync();
+
+            return vm;
+        });
+        builder.Services.AddTransient<AsyncInitializerPage2>();
 
         return builder.Build();
     }

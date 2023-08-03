@@ -8,15 +8,15 @@
     <VerticalStackLayout VerticalOptions="Center">
 
       <Button
-        Text="async void"
+        Text="async void - Shell"
         Clicked="OnAsyncVoidButtonClicked" />
 
       <Button
-        Text="discarded Task"
+        Text="discarded Task - Shell"
         Clicked="OnDiscardedTaskButtonClicked" />
 
       <Button
-        Text="async initializer v1"
+        Text="async initializer v1 - Shell"
         Clicked="OnAsyncInitializerButtonClicked" />
 
       <Button
@@ -26,6 +26,10 @@
       <Button
         Text="async initializer v2 - push before await"
         Clicked="OnAsyncInitializer3ButtonClicked" />
+
+      <Button
+        Text="async initializer v2 - Shell"
+        Clicked="OnAsyncInitializer4ButtonClicked" />
 
       <Button
         Text="async factory"
