@@ -7,10 +7,9 @@ namespace AsyncAwaitConstructors.Examples.AsyncInitializer;
 public partial class AsyncInitializerViewModel : ObservableObject
 {
     [ObservableProperty]
-    private ObservableCollection<string> _productList = new();
-
-    public AsyncInitializerViewModel() { }
-
+    private ObservableCollection<string> _productList;
+    
+    // Providing a public method to load the data allows the caller to decide when data is loaded and await the returned Task
     public async Task LoadAsync()
     {
         await Task.Delay(TimeSpan.FromSeconds(2));

@@ -41,7 +41,7 @@ public partial class MainPage : ContentPage
         var page = new AsyncInitializerPage2(vm);
         await Shell.Current.Navigation.PushAsync(page);
 
-        // loading the ViewModel data after showing the page is useful to provide a smoother user experience
+        // awaiting the loading of the ViewModel data after showing the page is useful to provide a smoother user experience
         await vm.LoadAsync();
     }
 

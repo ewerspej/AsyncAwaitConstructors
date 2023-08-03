@@ -7,8 +7,10 @@ namespace AsyncAwaitConstructors.Examples.AsyncFactory;
 public partial class AsyncFactoryViewModel : ObservableObject
 {
     [ObservableProperty]
-    private ObservableCollection<string> _productList = new();
+    private ObservableCollection<string> _productList;
 
+    // In order to prevent callers from instantiating the ViewModel directly, we change the visibility of the default constructor to private.
+    // This forces callers to use the CreateNewAsync() factory method, which already loads the data.
     private AsyncFactoryViewModel() {}
 
     private async Task LoadAsync()
@@ -21,6 +23,8 @@ public partial class AsyncFactoryViewModel : ObservableObject
         };
     }
 
+    // This pattern is very useful in order to avoid async void methods or calling asynchronous methods in constructors.
+    // One downside of this approach is that the created object is only available after loading finished.
     public static async Task<AsyncFactoryViewModel> CreateNewAsync()
     {
         var instance = new AsyncFactoryViewModel();

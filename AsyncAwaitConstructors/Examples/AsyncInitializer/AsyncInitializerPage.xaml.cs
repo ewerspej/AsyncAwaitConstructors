@@ -10,7 +10,7 @@ public partial class AsyncInitializerPage : ContentPage
 
 		BindingContext = _viewModel = new AsyncInitializerViewModel();
 
-        // will work, but will be overwritten by LoadAsync() call
+        // won't work, because the ViewModel is not initialized yet
         _viewModel.AddProduct("Pizza");
     }
 
@@ -21,7 +21,7 @@ public partial class AsyncInitializerPage : ContentPage
         // problem: we load the data every time the page appears on screen, which is not ideal and often not wanted
         await _viewModel.LoadAsync();
 
-        // will work, because it's called after the ViewModel has been initialized
+        // will work, because it's called after the ViewModel has been initialized (caution: this happens every time the page appears on screen)
         _viewModel.AddProduct("Strawberry ice cream");
     }
 }

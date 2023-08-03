@@ -16,15 +16,15 @@
         Clicked="OnDiscardedTaskButtonClicked" />
 
       <Button
-        Text="async initializer"
+        Text="async initializer v1"
         Clicked="OnAsyncInitializerButtonClicked" />
 
       <Button
-        Text="async initializer v2"
+        Text="async initializer v2 - push after await"
         Clicked="OnAsyncInitializer2ButtonClicked" />
 
       <Button
-        Text="async initializer v3"
+        Text="async initializer v2 - push before await"
         Clicked="OnAsyncInitializer3ButtonClicked" />
 
       <Button
