@@ -1,6 +1,6 @@
-﻿using AsyncAwaitConstructors.Examples.AsyncInitializer;
-using AsyncAwaitConstructors.Examples.AsyncVoid;
-using AsyncAwaitConstructors.Examples.DiscardedTask;
+﻿using AsyncAwaitConstructors.Examples1.AsyncInitializer;
+using AsyncAwaitConstructors.Examples1.AsyncVoid;
+using AsyncAwaitConstructors.Examples1.DiscardedTask;
 
 namespace AsyncAwaitConstructors;
 

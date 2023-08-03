@@ -1,8 +1,8 @@
-﻿using CommunityToolkit.Mvvm.ComponentModel;
+﻿using System.Collections.ObjectModel;
+using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
-using System.Collections.ObjectModel;
 
-namespace AsyncAwaitConstructors.Examples.DiscardedTask;
+namespace AsyncAwaitConstructors.Examples1.DiscardedTask;
 
 public partial class DiscardedTaskViewModel : ObservableObject
 {

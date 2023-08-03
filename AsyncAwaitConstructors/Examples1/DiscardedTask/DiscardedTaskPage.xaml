@@ -2,8 +2,8 @@
 <ContentPage
   xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
   xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-  xmlns:discardedTask="clr-namespace:AsyncAwaitConstructors.Examples.DiscardedTask"
-  x:Class="AsyncAwaitConstructors.Examples.DiscardedTask.DiscardedTaskPage"
+  xmlns:discardedTask="clr-namespace:AsyncAwaitConstructors.Examples1.DiscardedTask"
+  x:Class="AsyncAwaitConstructors.Examples1.DiscardedTask.DiscardedTaskPage"
   x:DataType="discardedTask:DiscardedTaskViewModel"
   Title="DiscardedTaskPage">
 

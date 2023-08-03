@@ -1,4 +1,4 @@
-namespace AsyncAwaitConstructors.Examples.DiscardedTask;
+namespace AsyncAwaitConstructors.Examples1.DiscardedTask;
 
 public partial class DiscardedTaskPage : ContentPage
 {

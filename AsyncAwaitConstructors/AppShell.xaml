@@ -6,9 +6,13 @@
     xmlns:local="clr-namespace:AsyncAwaitConstructors"
     Shell.FlyoutBehavior="Disabled">
 
+  <TabBar>
     <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
+      Title="Pages"
+      ContentTemplate="{DataTemplate local:PagesPage}"
+      Route="PagesPage" />
+    <!--<ShellContent
+        Title="Data" />-->
+  </TabBar>
 
 </Shell>

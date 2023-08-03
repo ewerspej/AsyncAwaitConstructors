@@ -1,4 +1,4 @@
-namespace AsyncAwaitConstructors.Examples.AsyncFactory;
+namespace AsyncAwaitConstructors.Examples1.AsyncFactory;
 
 public partial class AsyncFactoryPage : ContentPage
 {

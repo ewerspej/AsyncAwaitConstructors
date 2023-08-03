@@ -1,13 +1,13 @@
-﻿using AsyncAwaitConstructors.Examples.AsyncFactory;
-using AsyncAwaitConstructors.Examples.AsyncInitializer;
-using AsyncAwaitConstructors.Examples.AsyncVoid;
-using AsyncAwaitConstructors.Examples.DiscardedTask;
+﻿using AsyncAwaitConstructors.Examples1.AsyncFactory;
+using AsyncAwaitConstructors.Examples1.AsyncInitializer;
+using AsyncAwaitConstructors.Examples1.AsyncVoid;
+using AsyncAwaitConstructors.Examples1.DiscardedTask;
 
 namespace AsyncAwaitConstructors;
 
-public partial class MainPage : ContentPage
+public partial class PagesPage : ContentPage
 {
-    public MainPage()
+    public PagesPage()
     {
         InitializeComponent();
     }

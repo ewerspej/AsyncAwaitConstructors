@@ -1,4 +1,4 @@
-namespace AsyncAwaitConstructors.Examples.AsyncVoid;
+namespace AsyncAwaitConstructors.Examples1.AsyncVoid;
 
 public partial class AsyncVoidPage : ContentPage
 {

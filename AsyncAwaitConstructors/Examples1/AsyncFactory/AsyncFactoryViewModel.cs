@@ -1,8 +1,8 @@
-﻿using CommunityToolkit.Mvvm.ComponentModel;
+﻿using System.Collections.ObjectModel;
+using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
-using System.Collections.ObjectModel;
 
-namespace AsyncAwaitConstructors.Examples.AsyncFactory;
+namespace AsyncAwaitConstructors.Examples1.AsyncFactory;
 
 public partial class AsyncFactoryViewModel : ObservableObject
 {
@@ -23,8 +23,8 @@ public partial class AsyncFactoryViewModel : ObservableObject
         };
     }
 
-    // This pattern is very useful in order to avoid async void methods or calling asynchronous methods in constructors.
-    // One downside of this approach is that the created object is only available after loading finished,
+    // This pattern is very useful in order to avoid writing async void methods and calling asynchronous methods in constructors in general.
+    // One downside of this approach is that the created object is only available to the caller after the asynchronous loading task finished,
     // which also means that it won't work with Shell's dependency injection, because only synchronous factory methods are possible.
     public static async Task<AsyncFactoryViewModel> CreateNewAsync()
     {

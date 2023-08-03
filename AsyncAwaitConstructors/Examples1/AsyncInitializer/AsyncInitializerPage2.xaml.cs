@@ -1,4 +1,4 @@
-namespace AsyncAwaitConstructors.Examples.AsyncInitializer;
+namespace AsyncAwaitConstructors.Examples1.AsyncInitializer;
 
 public partial class AsyncInitializerPage2 : ContentPage
 {
